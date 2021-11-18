@@ -64,11 +64,20 @@ footer {
   transform: scale(1);
 }
 
-/* All task Styling */
+/* Task List Styling */
 
 .all-task {
   flex: 1;
-  background-color: honeydew;
+}
+
+.all-task-header {
+  background-color: hsl(41, 100%, 65%);
+  padding: 1rem;
+}
+
+.all-task-body {
+  padding: 1rem;
+  background-color: rgb(255, 247, 141);
 }
 
 .task-list {
@@ -78,7 +87,8 @@ footer {
 }
 
 .task-list .active-list {
-  font-weight: 800;
+  font-weight: 900;
+  color: cornflowerblue;
 }
 
 .list-name {
@@ -115,8 +125,9 @@ input {
 
 .new:focus {
   border-bottom-width: 3px;
-  border-color: rgba(0, 0, 0, 0.8);
+  border-color: rgba(0, 0, 0, 0.7);
 }
+
 .new:focus::placeholder {
   opacity: 0.5;
 }
