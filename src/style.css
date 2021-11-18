@@ -40,12 +40,7 @@ main {
 
 footer {
   padding: 2rem;
-}
-
-form {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 1rem;
+  font-family: sans-serif;
 }
 
 /* Button Styling */
@@ -58,13 +53,15 @@ form {
 }
 
 .btn.create {
-  font-size: 1.5rem;
-  font-weight: 900;
-  transition: 200ms ease-in;
+  transition: 50ms ease-in;
 }
 
 .btn.create:hover {
-  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+.btn.create:active {
+  transform: scale(1);
 }
 
 /* All task Styling */
@@ -94,25 +91,38 @@ form {
 
 /* Form Stying */
 
+form {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: start;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+input {
+  font-family: inherit;
+}
+
 .new {
   background: transparent;
   border: none;
   border-bottom: 1px solid black;
   font-size: inherit;
   outline: none;
-
   transition: 100ms ease-in-out;
 }
 
 .new:focus {
-  transform: scale(1.1);
-  border-bottom-width: 2px;
+  border-bottom-width: 3px;
+  border-color: rgba(0, 0, 0, 0.8);
 }
 .new:focus::placeholder {
   opacity: 0.5;
 }
 
 /* To Do List Styling */
+
 .todo-list {
   flex: 2;
 }
@@ -121,7 +131,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   padding: 1rem;
   background-color: #d3d3d3;
 }
@@ -135,7 +145,7 @@ form {
 
 .task {
   padding: 1rem 0;
-  border-bottom: 1.5px solid rgba(0, 0, 0);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
 }
 
 .task label {
@@ -221,6 +231,11 @@ form {
 .delete:hover {
   transform: scale(1.1);
   color: black;
+}
+
+.delete:active {
+  position: relative;
+  top: 3px;
 }
 
 .delete:nth-child(1):hover {
