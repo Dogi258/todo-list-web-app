@@ -1,6 +1,7 @@
 export default class ToDo {
-  constructor(id, name) {
-    this.id = id;
+  constructor(name) {
+    this.id = Date.now().toString();
     this.name = name;
+    this.task = [];
   }
 }
