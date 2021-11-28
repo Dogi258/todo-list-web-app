@@ -1,4 +1,4 @@
-import ToDo from "./to-do";
+import ToDo from "./to-do-list";
 
 const listContainer = document.querySelector("[data-list]");
 const newListForm = document.querySelector("[data-new-list-form");

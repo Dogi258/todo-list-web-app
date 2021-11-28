@@ -1,6 +1,9 @@
-import "./style.css";
-import ToDo from "./to-do.js";
-import { render, allToDoList, setEventListeners } from "./all-list-module.js";
+import "./css/style.css";
+import {
+  render,
+  allToDoList,
+  setEventListeners,
+} from "./scripts/DOM-controller.js";
 
 render();
 setEventListeners();
