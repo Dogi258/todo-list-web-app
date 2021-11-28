@@ -21,11 +21,7 @@
           <h2>My List</h2>
         </div>
         <div class="all-task-body">
-          <ul class="task-list" data-list>
-            <li class="list-name active-list">List 1</li>
-            <li class="list-name">List 2</li>
-            <li class="list-name">List 3</li>
-          </ul>
+          <ul class="task-list" data-list></ul>
           <form action="" data-new-list-form>
             <input
               type="text"
@@ -44,30 +40,12 @@
           <p class="task-count" data-list-count>3 task remaining</p>
         </div>
         <div class="todo-body">
-          <div class="tasks" data-task-container>
-            <div class="task">
-              <input type="checkbox" id="task-1" />
-              <label for="task-1">
-                <span class="custom-checkbox"></span> My todo task</label
-              >
-            </div>
-            <div class="task">
-              <input type="checkbox" id="task-2" />
-              <label for="task-2">
-                <span class="custom-checkbox"></span> My todo task</label
-              >
-            </div>
-            <div class="task">
-              <input type="checkbox" id="task-3" />
-              <label for="task-3">
-                <span class="custom-checkbox"></span> My todo task</label
-              >
-            </div>
-          </div>
-          <div class="new-task-creater">
+          <div class="tasks" data-task-container></div>
+          <div class="new-task-creater" data-new-task-form>
             <form action="">
               <input
                 type="text"
+                data-new-task-input
                 class="new"
                 placeholder="new task name"
                 aria-label="new task name"
@@ -79,7 +57,9 @@
           </div>
         </div>
         <div class="delete-stuff">
-          <button class="btn delete">Clear completed task</button>
+          <button class="btn delete" data-clear-complete-task-button>
+            Clear completed task
+          </button>
           <button class="btn delete" data-delete-list-button>
             Delete list
           </button>
@@ -87,5 +67,13 @@
       </div>
     </main>
     <footer>Copyright © 2021 Daniel Martinez</footer>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
   </body>
 </html>

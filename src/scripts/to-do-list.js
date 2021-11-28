@@ -1,18 +1,14 @@
+import Task from "./task";
+
 export default class ToDoList {
-  constructor(name) {
-    this.id = Date.now().toString();
+  constructor(id, name) {
+    this.id = id;
     this.name = name;
     this.list = [];
   }
 
   add(task) {
     this.list.push(task);
-  }
-
-  remove(index) {
-    if (index > -1) {
-      this.list.splice(index, 1);
-    }
   }
 
   getTaskRemaining() {
